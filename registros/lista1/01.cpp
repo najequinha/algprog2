@@ -1,27 +1,26 @@
 #include <stdio.h>
-#define MAX 100
 
-struct aluno{
-	char nome[MAX];
-	int matricula;
-	double n1, n2;
-}
+struct aluno {
+    char nome[40];
+    int mat;
+    float n1, n2;
+};
 
-int main() {
-	int n;
-	scanf("%d", &n);
+int main () {
+    int n;
+    scanf("%d", &n);
 
-	struct aluno alunos[n];
+    aluno alunos[n];
 
-	for (int i = 0; i < n; i++) {
-		scanf("%c %d %lf %lf", &alunos.nome[i], &alunos.matricula[i], &alunos.n1[i], &alunos.n2[i]);
-	}
+    for (int i = 0; i < n; i++) {
+        scanf("%c %d %f %f", &alunos.nome[i], &alunos.mat[i], &alunos.n1[i], &alunos.n2[i]);
 
+    }
 
-
-	for (int = i; i < n; i++) {
-		printf("%d %c %.1lf\n", alunos.matricula[i], alunos.nome[i], (alunos.n1[i]+alunos.n2[i])/2);
-	}
+    for (int i = 0; i < n; i++) {
+        printf("%d %c %f", alunos.mat[i], alunos.nome[i], (alunos.n1[i] + alunos.n2[i])/2);
+    }
 
 
+    return 0;
 }
