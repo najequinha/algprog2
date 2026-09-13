@@ -6,11 +6,12 @@ int potencia(int x, int n) {
 	}
 
 	else if (n % 2 == 0) {
-		return potencia(x, n/2*2);
+		int p = potencia(x, n/2);
+		return p * p;
 	}
 
 	else{
-		return potencia(x*x, n-1);
+		return x * potencia(x, n-1);
 	}
 }
 
@@ -27,3 +28,4 @@ int main() {
 
 	return 0;
 }
+
